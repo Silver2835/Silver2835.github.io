@@ -9,12 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;blog&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/child/atom.xml" title="Hexo" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -22,7 +22,7 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/child/css/style.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/child/" id="logo">Hexo</a>
       </h1>
       
     </div>
@@ -41,19 +41,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/child/">Home</a>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/child/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/child/atom.xml" title="RSS Feed"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/blog"></form>
       </div>
     </div>
   </div>
@@ -61,9 +61,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-first-article" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hexo d 找不到仓库的问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/21/first-article/" class="article-date">
+    <a href="/child/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
   <time datetime="2019-10-21T08:57:33.000Z" itemprop="datePublished">2019-10-21</time>
 </a>
     
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/first-article/">first article</a>
+      <a class="article-title" href="/child/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/">hexo d 找不到仓库的问题</a>
     </h1>
   
 
@@ -83,11 +83,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="hexo-d-找不到仓库的问题"><a href="#hexo-d-找不到仓库的问题" class="headerlink" title="hexo d 找不到仓库的问题"></a>hexo d 找不到仓库的问题</h1><p>因为这个问题真的搞了我好久<br>所以发布成功后第一时间写了这篇文章<br>在按照教程用github+hexo搭建blog的时候可以用hexo s<br>并且可以localhost：4000查看<br>但是没办法hexo d发布<br>错误提示如下：</p>
+<blockquote>
+<pre><code>ERROR: Repository not found. 
+fatal: Could not read from remote repository.</code></pre></blockquote>
+<p>于是上网疯狂找教程<br>应该是yml对格式十分严格<br>然后在“：”后面加上了空格<br>用空格进行缩进<br>然而。。。还是不行<br>发现有人说hexo的版本不一样，网上的各种教程都是比较老的版本，于是找了篇2019的教程去设置deploy</p>
+<p>教程<a href="http://" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018250408</a></p>
+<p>然后照着打了一遍还是不行<br>最后气得我直接复制粘贴，再改一下网址<br>结果。。。。。。。<br>就成功了！！</p>
+<p>今天的教训就是：<br>教程尽量找最新的<br>然后实在不行就直接复制粘贴代码</p>
+<p>就这样<br>（第一次写博文可能排版问题很大。。。。）</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/21/first-article/" data-id="ck21c6azx00002suy5bgj1htm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="ck21hb9b80001ysuy9bbzdvtf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,7 +108,7 @@
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/21/hello-world/" class="article-date">
+    <a href="/child/2019/10/21/hello-world/" class="article-date">
   <time datetime="2019-10-21T07:49:04.037Z" itemprop="datePublished">2019-10-21</time>
 </a>
     
@@ -111,7 +120,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/hello-world/">hello-world</a>
+      <a class="article-title" href="/child/2019/10/21/hello-world/">hello-world</a>
     </h1>
   
 
@@ -119,12 +128,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#hello world</p>
-
+        <h1 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h1>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/21/hello-world/" data-id="ck21c6b0300012suy0pl6hc3p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/10/21/hello-world/" data-id="ck21hb9b20000ysuy2lc5amjq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +160,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/child/archives/2019/10/">October 2019</a></li></ul>
     </div>
   </div>
 
@@ -165,11 +173,11 @@
       <ul>
         
           <li>
-            <a href="/2019/10/21/first-article/">first article</a>
+            <a href="/child/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/">hexo d 找不到仓库的问题</a>
           </li>
         
           <li>
-            <a href="/2019/10/21/hello-world/">hello-world</a>
+            <a href="/child/2019/10/21/hello-world/">hello-world</a>
           </li>
         
       </ul>
@@ -192,9 +200,9 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/child/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/child/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
     
@@ -202,11 +210,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/child/fancybox/jquery.fancybox.css">
+  <script src="/child/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
+<script src="/child/js/script.js"></script>
 
 
 

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Zk&#39;s blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Zk&#39;s blog">
+  <title>攻防世界writeup | Zk&#39;s blog</title>
+  <meta name="keywords" content=" wp , web ">
+  <meta name="description" content="攻防世界writeup | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="在Aurora的招新在中有一道题需要输入{{ config.items() }}这其中有“{{}}”当我像往常一样高兴地hexo d -g 的时候却报错了然后虔诚地Google解决方法找到了一篇博客最终解决了问题: {{ config.items() }}">
 <meta name="keywords" content="hexo">
@@ -51,7 +51,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -332,12 +332,57 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-web基础" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#My-Blog"><span class="toc-text">My Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于自己"><span class="toc-text">关于自己</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于writeup"><span class="toc-text">关于writeup</span></a></li></ol></li></ol>
+        <h1 class="article-title">攻防世界writeup</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="Web">Web</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">wp</a>
+            
+            <a href="javascript:" class="color4">web</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-21 11:00:02'>2019-10-26 21:01</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-基础"><span class="toc-text">Web 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#view-source"><span class="toc-text">view_source</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#robots"><span class="toc-text">robots</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#backup"><span class="toc-text">backup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie"><span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#disabled-button"><span class="toc-text">disabled_button</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#simple-js"><span class="toc-text">simple_js</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -350,25 +395,101 @@
     }
 </style>
 </div>
-            <h1 id="My-Blog"><a href="#My-Blog" class="headerlink" title="My Blog"></a>My Blog</h1><blockquote>
-<p>主题来源于<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">https://github.com/yelog/hexo-theme-3-hexo</a></p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Web-基础"><a href="#Web-基础" class="headerlink" title="Web 基础"></a>Web 基础</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>攻防世界的题目真的蛮好的,以题代点,通过题目把一个一个基础知识展开,因此在做题的时候顺便记录,既是wp也是基础知识的记录吧</p>
+<h2 id="view-source"><a href="#view-source" class="headerlink" title="view_source"></a>view_source</h2><p>题目:</p>
+<blockquote>
+<p>X老师让小宁同学查看一个网页的源代码,但小宁同学发现鼠标右键好像不管用了。</p>
 </blockquote>
-<h2 id="关于自己"><a href="#关于自己" class="headerlink" title="关于自己"></a>关于自己</h2><p>“没有人一生下来就会，学快点就好了”</p>
-<p>零基础不是问题，问题是你过了一个多月了还是零基础？！</p>
-<p>划水了一个多月之后，从不知道该学什么，到现在好像什么都得学，是真的要学快点，再学快点了！</p>
-<h2 id="关于writeup"><a href="#关于writeup" class="headerlink" title="关于writeup"></a>关于writeup</h2><p>刚开始大佬们叫我们去做hacker game2018，说可以看着答案做<br>然后我就懵逼了，答案？哪来的答案？我翻遍整个网站都找不到答案啊</p>
-<p>然后大佬们说要去搜索相应的题解，然后我才知道了有writeup这种东西</p>
-<p>刚开始以为只有一些大佬才会写writeup，就像我们写数学题，课后习题专门有一本习题解答，普通人不可能去写这个把。<br>然后就到了培训，大佬们问我们平时写题会不会写writeup，然后我又懵逼了。。。</p>
-<p>然后大佬说每一次比赛都要写writeup，比赛结束后主办方可能会要你的wp，如果你没有就gg了</p>
-<p>好了我又理解了，原来wp是证明解题过程的一个材料</p>
-<p>直到最近在做攻防世界的题目，题目中出现了很多诸如robots.txt，cookie，backup的基础知识点，就会很想要记下来</p>
-<p>怎么记下来呢，我说，干脆就写wp吧，大佬们不是让我们平时解题写下解题过程吗。</p>
-<p>然后写着写着就发现，好像了写了wp之后，解题的感觉都不一样了，就像高中老师说的，你把题目和别人讲一遍，肯定是不一样的！</p>
-<p>然后我就开始了wp之旅</p>
+<p>查看源代码可以右键“查看源代码”/“检查”<br>或者直接F12</p>
+<p>这里右键不了就F12</p>
+<p><img src="https://img-blog.csdnimg.cn/20191026211155730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="然后就可以看到flag了"></p>
+<p>虽然不知道如何实现不可以右键。。。</p>
+<h2 id="robots"><a href="#robots" class="headerlink" title="robots"></a>robots</h2><p>题目:</p>
+<blockquote>
+<p>X老师上课讲了Robots协议,小宁同学却上课打了瞌睡,赶紧来教教小宁Robots协议是什么吧。</p>
+</blockquote>
+<p>提到了robots协议,于是去wiki上面找</p>
+<blockquote>
+<p>robots.txt(统一小写)是一种存放于网站根目录下的ASCII编码的文本文件,它通常告诉网络搜索引擎的漫游器(又称网络蜘蛛),此网站中的哪些内容是不应被搜索引擎的漫游器获取的,哪些是可以被漫游器获取的。因为一些系统中的URL是大小写敏感的,所以robots.txt的文件名应统一为小写。robots.txt应放置于网站的根目录下。如果想单独定义搜索引擎的漫游器访问子目录时的行为,那么可以将自定的设置合并到根目录下的robots.txt,或者使用robots元数据(Metadata,又称元数据)。<br>robots.txt协议并不是一个规范,而只是约定俗成的,所以并不能保证网站的隐私。注意robots.txt是用字符串比较来确定是否获取URL,所以目录末尾有与没有斜杠“/”表示的是不同的URL。</p>
+</blockquote>
+<p>“robot放在网站根目录下.txt”==》在网址后加“/robots.txt”<br><img src="https://img-blog.csdnimg.cn/20191026212300415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt=""></p>
+<p>然后再访问/f1ag_1s_h3re.php<br><img src="https://img-blog.csdnimg.cn/20191026212428214.png" alt=""></p>
+<p>得到flag</p>
+<h2 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h2><blockquote>
+<p>常见的备份文件后缀名有: .git .svn .swp .svn .~ .bak .bash_history</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20191026213404147.png" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20191026213541374.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="打开下载的php,找到flag"><br>或者按照官方writeup 使用dirsearch<br><img src="https://img-blog.csdnimg.cn/20191027090835992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://img-blog.csdnimg.cn/20191027090737400.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="然后就可以检索到index.php.bak"><br>又学会了一个工具</p>
+<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>题目:</p>
+<blockquote>
+<p>X老师告诉小宁他在cookie里放了些东西,小宁疑惑地想:‘这是夹心饼干的意思吗?’</p>
+</blockquote>
+<p>继续Google</p>
+<blockquote>
+<p>一个HTTP cookie的(也称为网络Cookie,互联网的cookie,浏览器cookie,或者simply cookie)是一小块从发送的数据的网站用户的并存储在用户的计算机上的网页浏览器,而用户浏览。Cookies被设计为网站记住状态信息(例如在线商店的购物车中添加的商品)或记录用户的浏览活动(包括单击特定按钮,登录)的可靠机制。,或记录过去访问过的页面)。它们还可以用于记住用户先前在表单字段中输入的任意信息,例如名称,地址,密码和信用卡号。<br>(谷歌翻译有点鬼畜)</p>
+</blockquote>
+<p>用火狐打开,找到“存储”,可以看到“look-here=cookie.php”<br><img src="https://img-blog.csdnimg.cn/20191027091719160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="cookie"></p>
+<p>那就继续访问url/cookie.php</p>
+<p><img src="https://img-blog.csdnimg.cn/20191027092010498.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="see the http response"><br>然后它让你查看http响应</p>
+<p>然后点开“网络”可以看到数据包,点开可以在右侧看到flag<br><img src="https://img-blog.csdnimg.cn/20191027092156510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="disabled-button"><a href="#disabled-button" class="headerlink" title="disabled_button"></a>disabled_button</h2><p>题目:</p>
+<blockquote>
+<p>X老师今天上课讲了前端知识,然后给了大家一个不能按的按钮,小宁惊奇地发现这个按钮按不下去,到底怎么才能按下去呢?</p>
+</blockquote>
+<p>这道题。。。hacker game2019考过了</p>
+<p>重点是“前端知识”,所以继续Google</p>
+<blockquote>
+<p>Web前端: 顾名思义是来做Web的前端的。这里所说的前端泛指Web前端,也就是在Web应用中用户可以看得见碰得着的东西。包括Web页面的结构、Web的外观视觉表现以及Web层面的交互实现。<br>Web后端:后端更多的是与数据库进行交互以处理相应的业务逻辑。需要考虑的是如何实现功能、数据的存取、平台的稳定性与性能等</p>
+</blockquote>
+<blockquote>
+<p>前端开发和后台开发是有区别的,工作的内容和负责的东西是完全的不同的,以下以网站的开发为例。<br>1、前端开发<br>前端开发现在一般指的就是web前端开发工程师,其负责是网站前端页面也就是网页的页面开发,简单的说网站前端负责是东西是网站用户可见的东西,如网页上的特效、网页的布局、图片、视频等内容。网站前端工程师的工作内容就是将美工设计的效果图的设计成浏览器可以运行的网页,并和后端开发工程师配合做网页的数据显示和交互。<br>2、后端开发<br>后端开发一般也叫做后台,其负责是网站后台逻辑的设计和实现还有用户及网站的数据的保存和读取。比如一般网站都是有用户注册和登录的,用户的注册的信息通过前端发送给后端,后端将其保存在数据库中,用户登录网站的时候,后端需要通过用户输入的用户名和密码是否与数据库中的一致来判断用户是否有权限登录,这是后台开发中的一个最简单的功能。</p>
+<p>———————————————— 版权声明:本文为CSDN博主「是世博呀」的原创文章,遵循 CC 4.0 BY-SA<br>版权协议,转载请附上原文出处链接及本声明。<br>原文链接:<a href="https://blog.csdn.net/yinghuo110/article/details/79057513" target="_blank" rel="noopener">https://blog.csdn.net/yinghuo110/article/details/79057513</a></p>
+</blockquote>
+<p>对了,之前没有声明的引用都是Wikipedia的。</p>
+<p>好了打开题目:<br><img src="https://img-blog.csdnimg.cn/20191027093229678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="但是居然没有&lt;button&gt;标签"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191027093435580.png" alt="我这里选择把disable改成able"></p>
+<p>(也不知道是不是该这么改,html没学好。。留下了不学无术的泪水)</p>
+<p><img src="https://img-blog.csdnimg.cn/20191027093626522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="改了之后就可以了"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191027093742433.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="得到flag"></p>
+<h2 id="simple-js"><a href="#simple-js" class="headerlink" title="simple_js"></a>simple_js</h2><p>题目:</p>
+<blockquote>
+<p>小宁发现了一个网页,但却一直输不对密码。(Flag格式为 Cyberpeace{xxxxxxxxx} )</p>
+</blockquote>
+<p>打开题目之后发现让你输密码,题目说一直输不对,那就随便填<br><img src="https://img-blog.csdnimg.cn/2019102709392358.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="打开之后让你填密码"></p>
+<p>然后果然错了<br>题目名字是“simple js”<br>那应该和JavaScript有关。<br>查看源代码<br><img src="https://img-blog.csdnimg.cn/2019102709434629.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="源代码"><br>看到了一个脚本。。。然后我又留下了不学无术的泪水,这就是我为什么说现在感觉什么都要学。。。</p>
+<p>先放放。。。</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>攻防世界writeup</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Kyle">Kyle</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-10-26, 21:01:54</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-21, 11:00:02</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/26/web%E5%9F%BA%E7%A1%80/" title="攻防世界writeup">https://silver2835.github.io/2019/10/26/web%E5%9F%BA%E7%A1%80/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

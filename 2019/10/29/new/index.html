@@ -6,41 +6,20 @@
   <meta name="keywords" content="">
   <meta name="description" content="new | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="MISCsan check签到题。。。用手速拿到了一血hh vim2048    答应我,别问我玩了多少次可以吗 wlan这题真的学到了头一次知道了cap然后下载了wireshark然后google流量分析进行学习刚开始在php?后面的那串数字上面纠结了好久。。。总觉得很奇怪。。。想了很久纯数字应该是什么密码然后继续往下翻,看到了login的数据,就觉得应该就在里面了然后翻开找到password就">
+<meta name="description" content="前言因为iOS13之后文件app的“连接到服务器”功能是利用smb的，所以本来想借此了解一下smb，能搞懂最好，结果发现搞着搞着就偏离了主题，变成了解window密码ntlm hash去了，算了算了。。。 #SMB简介SMB（Server Message Block）通信协议，一种应用层网络传输协议，由微软开发，主要功能是使网络上的机器能够共享计算机文件、打印机、串行端口和通讯等资源。主要是作为M">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Aurora新生赛wp">
-<meta property="og:url" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2019&#x2F;11&#x2F;02&#x2F;Aurora%E6%96%B0%E7%94%9F%E8%B5%9Bwp&#x2F;index.html">
+<meta property="og:title" content="smb协议">
+<meta property="og:url" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2020&#x2F;02&#x2F;18&#x2F;smb%E5%8D%8F%E8%AE%AE&#x2F;index.html">
 <meta property="og:site_name" content="Zk&#39;s blog">
-<meta property="og:description" content="MISCsan check签到题。。。用手速拿到了一血hh vim2048    答应我,别问我玩了多少次可以吗 wlan这题真的学到了头一次知道了cap然后下载了wireshark然后google流量分析进行学习刚开始在php?后面的那串数字上面纠结了好久。。。总觉得很奇怪。。。想了很久纯数字应该是什么密码然后继续往下翻,看到了login的数据,就觉得应该就在里面了然后翻开找到password就">
+<meta property="og:description" content="前言因为iOS13之后文件app的“连接到服务器”功能是利用smb的，所以本来想借此了解一下smb，能搞懂最好，结果发现搞着搞着就偏离了主题，变成了解window密码ntlm hash去了，算了算了。。。 #SMB简介SMB（Server Message Block）通信协议，一种应用层网络传输协议，由微软开发，主要功能是使网络上的机器能够共享计算机文件、打印机、串行端口和通讯等资源。主要是作为M">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102132139898.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102133203542.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102134349230.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102140320580.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102151413498.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102205915149.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191104123704653.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191104123433864.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191104125533910.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191103000037390.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191103163412440.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102232725426.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102230415836.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102230712973.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102230759365.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102224300517.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102224448584.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102223821159.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102231427462.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102231707637.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191103165845851.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191103171216139.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191103085724679.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191104231811949.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191104231858476.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2020-01-21T03:07:13.474Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2020&#x2F;02&#x2F;18&#x2F;smb%E5%8D%8F%E8%AE%AE&#x2F;pic&#x2F;20191122212450608.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2020&#x2F;02&#x2F;18&#x2F;smb%E5%8D%8F%E8%AE%AE&#x2F;pic&#x2F;20191129202908595.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2020&#x2F;02&#x2F;18&#x2F;smb%E5%8D%8F%E8%AE%AE&#x2F;pic&#x2F;20191129203659998.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2020&#x2F;02&#x2F;18&#x2F;smb%E5%8D%8F%E8%AE%AE&#x2F;pic&#x2F;20191129203925505.png">
+<meta property="og:updated_time" content="2020-02-18T05:30:38.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102132139898.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;silver2835.github.io&#x2F;2020&#x2F;02&#x2F;18&#x2F;smb%E5%8D%8F%E8%AE%AE&#x2F;pic&#x2F;20191122212450608.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -171,7 +150,7 @@
     
         
             
-            <li><div data-rel="Web">Web<small>(1)</small></div>
+            <li><div data-rel="读书笔记">读书笔记<small>(1)</small></div>
                 
             </li>
             
@@ -179,7 +158,7 @@
     
         
             
-            <li><div data-rel="读书笔记">读书笔记<small>(1)</small></div>
+            <li><div data-rel="Web">Web<small>(1)</small></div>
                 
             </li>
             
@@ -267,6 +246,14 @@
             <span class="post-date" title="2019-11-02 10:01:57">2019/11/02</span>
         </a>
         
+        <a  class=""
+           href="/2019/10/29/new/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="new">new</span>
+            <span class="post-date" title="2019-10-29 20:57:51">2019/10/29</span>
+        </a>
+        
         <a  class="题解 "
            href="/2019/10/22/2019hackergame-wp/"
            data-tag="wp"
@@ -283,12 +270,12 @@
             <span class="post-date" title="2019-10-21 16:57:33">2019/10/21</span>
         </a>
         
-        <a  class=""
-           href="/2019/10/29/new/"
+        <a  class="杂 "
+           href="/2020/02/18/smb%E5%8D%8F%E8%AE%AE/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="new">new</span>
-            <span class="post-date" title="2019-10-29 20:57:51">2019/10/29</span>
+            <span class="post-title" title="smb协议">smb协议</span>
+            <span class="post-date" title="2020-02-18 12:20:41">2020/02/18</span>
         </a>
         
         <a  class="杂 "
@@ -297,22 +284,6 @@
            data-author="" >
             <span class="post-title" title="md编辑器快速添加图片">md编辑器快速添加图片</span>
             <span class="post-date" title="2019-10-26 14:20:15">2019/10/26</span>
-        </a>
-        
-        <a  class="Web "
-           href="/2019/10/26/web%E5%9F%BA%E7%A1%80/"
-           data-tag="wp,web"
-           data-author="" >
-            <span class="post-title" title="攻防世界writeup">攻防世界writeup</span>
-            <span class="post-date" title="2019-10-26 21:01:54">2019/10/26</span>
-        </a>
-        
-        <a  class="杂 "
-           href="/2020/02/18/smb%E5%8D%8F%E8%AE%AE/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="smb协议">smb协议</span>
-            <span class="post-date" title="2020-02-18 12:20:41">2020/02/18</span>
         </a>
         
         <a  class="读书笔记 "
@@ -329,6 +300,14 @@
            data-author="" >
             <span class="post-title" title="攻防世界 web进阶">攻防世界 web进阶</span>
             <span class="post-date" title="2019-10-28 21:05:12">2019/10/28</span>
+        </a>
+        
+        <a  class="Web "
+           href="/2019/10/26/web%E5%9F%BA%E7%A1%80/"
+           data-tag="wp,web"
+           data-author="" >
+            <span class="post-title" title="攻防世界writeup">攻防世界writeup</span>
+            <span class="post-date" title="2019-10-26 21:01:54">2019/10/26</span>
         </a>
         
         <a  class="呓语 "

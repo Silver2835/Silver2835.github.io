@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>md编辑器快速添加图片 | Zk&#39;s blog</title>
-  <meta name="keywords" content=" markdown ">
-  <meta name="description" content="md编辑器快速添加图片 | Zk&#39;s blog">
+  <title>smb协议 | Zk&#39;s blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="smb协议 | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="MISCsan check签到题。。。用手速拿到了一血hh vim2048    答应我,别问我玩了多少次可以吗 wlan这题真的学到了头一次知道了cap然后下载了wireshark然后google流量分析进行学习刚开始在php?后面的那串数字上面纠结了好久。。。总觉得很奇怪。。。想了很久纯数字应该是什么密码然后继续往下翻,看到了login的数据,就觉得应该就在里面了然后翻开找到password就">
 <meta property="og:type" content="article">
@@ -359,9 +359,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-md编辑器快速添加图片" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-smb协议" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">md编辑器快速添加图片</h1>
+        <h1 class="article-title">smb协议</h1>
     
     <div class="article-meta">
         
@@ -374,16 +374,10 @@
         </span>
         
         
-        <span class="tag">
-            
-            <a href="javascript:" class="color4">markdown</a>
-            
-        </span>
-        
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-26 14:22:38'>2019-10-26 14:20</time>
+        创建时间:<time class="date" title='更新时间: 2020-02-18 13:30:38'>2020-02-18 12:20</time>
         
     </div>
     <div class="article-meta">
@@ -405,7 +399,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#通过smb抓包破解windows登录密码"><span class="toc-text">通过smb抓包破解windows登录密码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SMB与CTF"><span class="toc-text">SMB与CTF</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-text">最后</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -421,9 +415,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>前几天搭好博客之后迫不及待地用md编辑器去写文章，结果想贴图的时候发现。。。这怎么和我想的不一样啊！！为什么他没有个窗口让我直接上传图片之类的啊！这和我在word/excel/ppt插入图片不一样啊。。。。（大佬轻喷）</p>
-<p>然后就去Google了一下md编辑器如何添加图片，大致有三种，分别是网页链接，本地地址以及base64图片编码，在此就不一一赘述，但是我都觉得很麻烦。。。我今天想说一个比较简单（lan）的方法。</p>
-<p>这个方法就是。。。先把图片传到csdn或者简书之类的博客上面，然后就会有一个链接地址，然后你的图片就上传到他们的服务器并给你一个地址，然后你就可以直接把这个地址复制到md编辑器。<br>例如：<br><img src="https://img-blog.csdnimg.cn/20191025183318801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="这样"><br>对不起csdn，但是我真的太懒了。。。。。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为iOS13之后文件app的“连接到服务器”功能是利用smb的，所以本来想借此了解一下smb，能搞懂最好，结果发现搞着搞着就偏离了主题，变成了解window密码ntlm hash去了，算了算了。。。</p>
+<p>#SMB简介<br>SMB（Server Message Block）通信协议，一种应用层网络传输协议，由微软开发，主要功能是使网络上的机器能够共享计算机文件、打印机、串行端口和通讯等资源。<br>主要是作为Microsoft网络的通讯协议。后来Linux移植了SMB，并称为samba。</p>
+<p>#smb协议原理<br>（本来想要这样子Google出来为什么smb可以让ios连上windows，后来发现我真的是太天真了。。。。）</p>
+<p>主要看了两篇博客：<a href="https://www.cnblogs.com/yuzly/p/10480438.html" target="_blank" rel="noopener">SMB协议原理抓包分析</a>,<a href="http://blog.sina.com.cn/s/blog_7f62ec290101glx8.html" target="_blank" rel="noopener">SMB会话建立流程及抓包分析</a><br>于是拿出电脑和ipad，打开了wireshark，照着做了一遍：<br><img src="pic/20191122212450608.png" alt=""></p>
+<p>这个是一个连接请求，从我的ipad（192.168.137.69）发送到我的电脑（192.168.137.1）<br>User name是俩问号是因为我用的是中文名。。。。。</p>
+<p>不赘述了，博文中提到的数据报在上图中都有，一一点开看看，然后试着理解</p>
+<h1 id="通过smb抓包破解windows登录密码"><a href="#通过smb抓包破解windows登录密码" class="headerlink" title="通过smb抓包破解windows登录密码"></a>通过smb抓包破解windows登录密码</h1><p>Google的时候看到这个有趣的东西，发现自己也可以做，于是在这条不归路上越走越远。。。</p>
+<p>又是两篇博文：<a href="https://bbs.pediy.com/thread-176189.htm" target="_blank" rel="noopener">SMB抓包破解windows登陆密码</a>,<a href="https://www.jishuwen.com/d/2H6U" target="_blank" rel="noopener">路由器抓包分析之SMB篇</a></p>
+<p>先贴一下SMB的认证过程：</p>
+<blockquote>
+<p>1.正常情况，当client端登陆时需要先输入username，password和domain[默认是.，表示本地]，之后client端会自己计算出password用DES加密后的hash，并将此hash暂时保存在本地；<br>2.接着，client端会将自己的username明文发送给DC[server]；<br>3.此时，DC会生成一组8字节的随机数，也叫challenge[挑战码]，返回给client端；<br>4.当client端在收到这个挑战码以后，会把先把它拷贝一份出来，然后再拿着这个挑战码和之前已经加密的密码hash再进行一次加密，加密后的东西叫response[响应]，最后再将challenge，response和username一并发送给server端；<br>5.server端在接收到client端传过来的这个三个值以后会将它们分别都转发给DC；<br>6.DC在接收到username，response，challenge以后，会根据传过来的username，到自己的账号数据库中去查出来这个username所对应的hash，然后，再拿着这个hash和刚刚传过来的challenge再进行一次加密；<br>7.最后，就剩比对了，把客户端传过来的response和在[6]中最后加密的hash值进行对比，如果一致，ok，认证通过，登录成功，反之，则登录失败。</p>
+</blockquote>
+<p>所以通过理论上可以根据数据包中的hash值解出windows的登陆密码（因为连接smb用的是windows账户和登陆密码）<br>但是第一篇没看懂。。。不知道它的hash值怎么来的，所以尝试一下按照第二篇的教程，看下能不能破解自己的登陆密码。。。<br>根据Net-ntlmv1s数据包的固定拼接：</p>
+<pre><code>username::hostname:LM response:NTLM response:server challenge</code></pre><p>然后用自己的数据包进行拼接：<br>。。。。<br>那么问题又来了。。我的中文user name，全零LM response和challenge该怎么拼接。。。。。<br>尝试失败<br>over。。</p>
+<p>更新：</p>
+<p>又看了一篇博客：<a href="https://3gstudent.github.io/Windows%E4%B8%8B%E7%9A%84%E5%AF%86%E7%A0%81hash-NTLM-hash%E5%92%8CNet-NTLM-hash%E4%BB%8B%E7%BB%8D/" target="_blank" rel="noopener">Windows下的密码hash——NTLM hash和Net-NTLM hash介绍</a></p>
+<p>其实之前的lm response和challenge不应该是全零 只是我找错位置了而已。。。。</p>
+<p>但是中文用户名始终是个大问题，然后我通过新建一个账户解决了。。。。</p>
+<p><img src="pic/20191129202908595.png" alt="重新抓包结果"></p>
+<p><img src="pic/20191129203659998.png" alt="拼接过程"></p>
+<p>拼接结果：</p>
+<pre><code>silver:::83a66e53b3263bd8:4ca67c9214cfcd77d90da3a6127b130f:01010000000000008016ff43cca5d501a2e56fafc1a7067c0000000001001e004c004100500054004f0050002d0042004b004a0039004d0049005300310002001e004c004100500054004f0050002d0042004b004a0039004d0049005300310003001e004c004100500054004f0050002d0042004b004a0039004d0049005300310004001e004c004100500054004f0050002d0042004b004a0039004d004900530031000600040002000000070008002b92ac44cca5d50109001c003100390032002e003100360038002e003100330037002e0031002f000a001000000000000000000000000000000000000000000000000000</code></pre><p>然后丢进hashcat爆破密码（这一句话折腾了我一个星期）</p>
+<p><img src="pic/20191129203925505.png" alt=""></p>
+<p>解释一下： -m 是mode；5600 是net-NTLMv2；<br>-a是attack-mode；<br>3是掩码爆破（不使用字典）；<br>后面一串是上面拼接得到的；<br>–force是强制执行；<br>–show是将密码明文显示；</p>
+<p>得到密码：flag</p>
+<h1 id="SMB与CTF"><a href="#SMB与CTF" class="headerlink" title="SMB与CTF"></a>SMB与CTF</h1><p>google了一下，ctf中的smb大多数体现在AWD中，而解题赛中出现的比较少（好吧我没搜到）<br>不过我认为出一道这样破解密码得到flag的题目也未尝不可。。。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>折腾累了，不写了。。。。。</p>
 
       
        
@@ -433,12 +451,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>md编辑器快速添加图片</p>
+    <p><span class="copy-title">文章标题:</span>smb协议</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Kyle">Kyle</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-26, 14:20:15</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-26, 14:22:38</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/26/md%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/" title="md编辑器快速添加图片">https://silver2835.github.io/2019/10/26/md%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E9%80%9F%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/</a>
+    <p><span class="copy-title">发布时间:</span>2020-02-18, 12:20:41</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-18, 13:30:38</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/18/smb%E5%8D%8F%E8%AE%AE/" title="smb协议">https://silver2835.github.io/2020/02/18/smb%E5%8D%8F%E8%AE%AE/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

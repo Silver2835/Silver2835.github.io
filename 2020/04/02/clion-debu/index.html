@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>hexo d 找不到仓库的问题 | Zk&#39;s blog</title>
-  <meta name="keywords" content=" hexo ">
-  <meta name="description" content="hexo d 找不到仓库的问题 | Zk&#39;s blog">
+  <title>clion无法debug | Zk&#39;s blog</title>
+  <meta name="keywords" content=" Clion ">
+  <meta name="description" content="clion无法debug | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="前言在ichunqiu上面做的题目，大部分是2017强网杯的，虽然题目比较老，但是可能这种题才比较适合萌新。。。 broken这是打开之后的界面：然后点开file的超链接：看到了一堆奇怪的东西，根据题目的提示，我怎么看都不像是什么坏掉的文件啊。。。。这一堆玩意儿只有!()[]+这六种符号，第一感觉是这是一种密码，比如说()代表0，！代表1，[]…也代表零，+。。。。我编不下去了。。。 然后去Goo">
 <meta name="keywords" content="wp,web">
@@ -366,9 +366,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexo d 找不到仓库的问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-clion-debu" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">hexo d 找不到仓库的问题</h1>
+        <h1 class="article-title">clion无法debug</h1>
     
     <div class="article-meta">
         
@@ -383,14 +383,14 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color5">hexo</a>
+            <a href="javascript:" class="color1">Clion</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-18 12:11:26'>2019-10-21 16:57</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-02 10:37:36'>2020-04-02 10:20</time>
         
     </div>
     <div class="article-meta">
@@ -412,7 +412,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-d-找不到仓库的问题"><span class="toc-text">hexo d 找不到仓库的问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CLion无法debug"><span class="toc-text">CLion无法debug</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题的产生"><span class="toc-text">问题的产生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题的解决"><span class="toc-text">问题的解决</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -428,19 +428,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="hexo-d-找不到仓库的问题"><a href="#hexo-d-找不到仓库的问题" class="headerlink" title="hexo d 找不到仓库的问题"></a>hexo d 找不到仓库的问题</h1><p>因为这个问题真的搞了我好久<br>所以发布成功后第一时间写了这篇文章<br>在按照教程用github+hexo搭建blog的时候可以用hexo s<br>并且可以localhost：4000查看<br>但是没办法hexo d发布<br>错误提示如下：</p>
-<blockquote>
-<pre><code>ERROR: Repository not found. 
-fatal: Could not read from remote repository.</code></pre></blockquote>
-<p>于是上网疯狂找教程<br>应该是yml对格式十分严格<br>然后在“：”后面加上了空格<br>用空格进行缩进<br>然而。。。还是不行<br>发现有人说hexo的版本不一样，网上的各种教程都是比较老的版本，于是找了篇2019的教程去设置deploy</p>
-<p><a href="https://segmentfault.com/a/1190000018250408" target="_blank" rel="noopener">教程</a></p>
-<p>然后照着打了一遍还是不行<br>最后气得我直接复制粘贴，再改一下网址<br>结果。。。。。。。<br>就成功了！！</p>
-<p>今天的教训就是：<br>教程尽量找最新的<br>然后实在不行就直接复制粘贴代码</p>
-<p>就这样</p>
-<p>更新一个问题：<br>hexo好像不允许博文中出现两个花括号<br><img src="/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/1.png" alt></p>
-<p>hexo g的时候会报错：</p>
-<pre><code>FATAL Something’s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
-Nunjucks Error: [Line 19, Column 26] Error: Unable to call config[&quot;items&quot;], which is undefined or falsey</code></pre><p>然后努力地Google了一下：<br><img src="/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/2.png" alt><br>问题解决。</p>
+        <h2 id="CLion无法debug"><a href="#CLion无法debug" class="headerlink" title="CLion无法debug"></a>CLion无法debug</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>前两天照着<a href="https://www.jetbrains.com/help/clion/2019.2/how-to-use-wsl-development-environment-in-clion.html" target="_blank" rel="noopener">官网教程</a>装了Clion并且配置了WSL,但是使用的时候发现无法debug，<br>具体问题为：设置了断点，然后点击debug按钮，但是执行的时候，并不会在断点处停留，找了一上午终于发现了问题。</p>
+<h3 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h3><p>在官方教程中有一步需要我们创建一个单独的CMake配置文件，并将其连接到WSL工具链，如下图：<br><img src="/2020/04/02/clion-debu/1.png" alt><br>我发现图上的Build type是Release，当时也没有多想，也选了Release，结果就炸了。。。</p>
+<h3 id="问题的解决"><a href="#问题的解决" class="headerlink" title="问题的解决"></a>问题的解决</h3><p>解决方法很简单，只需要将那个Release改成Debug就可以，具体这两者有啥不一样，请自行google。（看名字也知道吧。。。）<br><img src="/2020/04/02/clion-debu/2.png" alt></p>
 
       
        
@@ -450,12 +440,12 @@ Nunjucks Error: [Line 19, Column 26] Error: Unable to call config[&quot;items&qu
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>hexo d 找不到仓库的问题</p>
+    <p><span class="copy-title">文章标题:</span>clion无法debug</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Kyle">Kyle</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-21, 16:57:33</p>
-    <p><span class="copy-title">最后更新:</span>2020-02-18, 12:11:26</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/" title="hexo d 找不到仓库的问题">https://silver2835.github.io/2019/10/21/hexo%20d%20%E6%89%BE%E4%B8%8D%E5%88%B0%E4%BB%93%E5%BA%93%E7%9A%84%E9%97%AE%E9%A2%98/</a>
+    <p><span class="copy-title">发布时间:</span>2020-04-02, 10:20:39</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-02, 10:37:36</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/02/clion-debu/" title="clion无法debug">https://silver2835.github.io/2020/04/02/clion-debu/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

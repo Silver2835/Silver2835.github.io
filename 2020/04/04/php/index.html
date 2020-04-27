@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>隐藏的信息 | Zk&#39;s blog</title>
-  <meta name="keywords" content=" wp , misc ">
-  <meta name="description" content="隐藏的信息 | Zk&#39;s blog">
+  <title>php代码审计 | Zk&#39;s blog</title>
+  <meta name="keywords" content=" wp , web ">
+  <meta name="description" content="php代码审计 | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="CLion无法debug背景前两天照着官网教程装了Clion并且配置了WSL,但是使用的时候发现无法debug，具体问题为：设置了断点，然后点击debug按钮，但是执行的时候，并不会在断点处停留，找了一上午终于发现了问题。 问题的产生在官方教程中有一步需要我们创建一个单独的CMake配置文件，并将其连接到WSL工具链，如下图：我发现图上的Build type是Release，当时也没有多想，也选了">
 <meta name="keywords" content="Clion">
@@ -361,9 +361,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-隐藏的信息" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-php" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">隐藏的信息</h1>
+        <h1 class="article-title">php代码审计</h1>
     
     <div class="article-meta">
         
@@ -380,14 +380,14 @@
             
             <a href="javascript:" class="color3">wp</a>
             
-            <a href="javascript:" class="color5">misc</a>
+            <a href="javascript:" class="color4">web</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-08 15:27:22'>2020-03-08 15:18</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-27 19:18:37'>2020-04-04 23:14</time>
         
     </div>
     <div class="article-meta">
@@ -409,7 +409,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#php代码审计"><span class="toc-text">php代码审计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1（2018HCTF-Warmup）"><span class="toc-text">1（2018HCTF-Warmup）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分析"><span class="toc-text">分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决"><span class="toc-text">解决</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -425,7 +425,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>高校战“疫”赛的题目。题目我没想出来，是examine大佬做出来的orz。然后自己又复现了一下。<br>附件给了一个残破的二维码和一个压缩包。</p>
+        <h1 id="php代码审计"><a href="#php代码审计" class="headerlink" title="php代码审计"></a>php代码审计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下这一周做的几道简单的php代码审计</p>
+<h2 id="1（2018HCTF-Warmup）"><a href="#1（2018HCTF-Warmup）" class="headerlink" title="1（2018HCTF-Warmup）"></a>1（2018HCTF-Warmup）</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>F12找到提示：source.php</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">  class emmm</span><br><span class="line">  &#123;</span><br><span class="line">    public static function checkFile(&amp;$page)</span><br><span class="line">    &#123;</span><br><span class="line">      $whitelist = [&quot;source&quot;=&gt;&quot;source.php&quot;,&quot;hint&quot;=&gt;&quot;hint.php&quot;];</span><br><span class="line">      if (! isset($page) || !is_string($page)) &#123;</span><br><span class="line">        echo &quot;you can&apos;t see it&quot;;</span><br><span class="line">        return false;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">​      if (in_array($page, $whitelist)) &#123;</span><br><span class="line">​        return true;</span><br><span class="line">​      &#125;</span><br><span class="line"></span><br><span class="line">​      $_page = mb_substr(</span><br><span class="line">​        $page,</span><br><span class="line">​        0,</span><br><span class="line">​        mb_strpos($page . &apos;?&apos;, &apos;?&apos;)</span><br><span class="line">​      );</span><br><span class="line">​      if (in_array($_page, $whitelist)) &#123;</span><br><span class="line">​        return true;</span><br><span class="line">​      &#125;</span><br><span class="line"></span><br><span class="line">​      $_page = urldecode($page);</span><br><span class="line">​      $_page = mb_substr(</span><br><span class="line">​        $_page,</span><br><span class="line">​        0,</span><br><span class="line">​        mb_strpos($_page . &apos;?&apos;, &apos;?&apos;)</span><br><span class="line">​      );</span><br><span class="line">​      if (in_array($_page, $whitelist)) &#123;</span><br><span class="line">​        return true;</span><br><span class="line">​      &#125;</span><br><span class="line">​      echo &quot;you can&apos;t see it&quot;;</span><br><span class="line">​      return false;</span><br><span class="line">​    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (! empty($_REQUEST[&apos;file&apos;])</span><br><span class="line">    &amp;&amp; is_string($_REQUEST[&apos;file&apos;])</span><br><span class="line">    &amp;&amp; emmm::checkFile($_REQUEST[&apos;file&apos;])</span><br><span class="line">  ) &#123;</span><br><span class="line">    include $_REQUEST[&apos;file&apos;];</span><br><span class="line">    exit;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    echo &quot;&lt;br&gt;&lt;img src=\&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\&quot; /&gt;&quot;;</span><br><span class="line">  &#125; </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>因为对php不太熟悉，所以还是看了蛮久的，所以详细解释一下</p>
+<p>首先从最下面的if else看起，如果’file’这个变量不为空，并且是字符串，并且checkFile(‘file’)为真，则include这个文件</p>
+<p>然后现在再去上面看checkFile这个函数：首先建了一个数组，里面有两个变量“source.php”,”hint.php”，然后if判断若传入的偏量page为空或者不是字符串，则输出“you can’t see it”，并且return false。</p>
+<p>然后是in_array这个函数，就是判断变量page是否在数组whitelist里面，如果在，return true。</p>
+<p>接着是下面的mb_substr函数，就是从第0位开始，返回变量page的mb_strpos($page . ‘?’, ‘?’)位，而mb_strpos则是返回“？”在page里第一次出现的位置，$page . ‘?’就是在page后面加上一个’?’，防止page里面本来没有‘?’，简单地说，这两个函数合在一起就是把问号后面的东西通通丢掉，所以我们就可以在问号后面做文章。</p>
+<p>在下面的urldecode函数就是对page进行url解码，因为”只有字母和数字[0-9a-zA-Z]、一些特殊符号”$-_.+!*’(),”[不包括双引号]、以及某些保留字，才可以不经过编码直接用于URL。”</p>
+<p>如果这三个in_array下来还是没有return true,则return false</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>首先肯定是想着要checkFile为true，但是同时也需要能把包含flag的文件include出来，根据hint，flag应该在文件ffffllllaaaagggg中，刚开始想的是<code>?file=source.php?ffffllllaaaagggg</code>然后利用某些方法在include把前面的<code>source.php</code>隐去，但是找了一圈，似乎并没有这种方法，然后去看wp发现是利用/使得<code>source.php</code>成为一个不存在的目录，然后<code>../</code>返回上级目录，实测<code>../</code>只能多不能少，所以ffffllllaaaagggg应该是在根目录中，但是如果这个文件藏在某个目录里面的话，emmmm</p>
+<p>payload:<code>?file=hint.php?/../../../../ffffllllaaaagggg</code></p>
+<p>​      或者:<code>?file=source.php?/../../../../ffffllllaaaagggg</code></p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p><img src="/2020/04/04/php/image-20200427191810632.png" alt="image-20200427191810632"></p>
 
       
        
@@ -435,12 +449,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>隐藏的信息</p>
+    <p><span class="copy-title">文章标题:</span>php代码审计</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Kyle">Kyle</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-08, 15:18:45</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-08, 15:27:22</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/08/%E9%9A%90%E8%97%8F%E7%9A%84%E4%BF%A1%E6%81%AF/" title="隐藏的信息">https://silver2835.github.io/2020/03/08/%E9%9A%90%E8%97%8F%E7%9A%84%E4%BF%A1%E6%81%AF/</a>
+    <p><span class="copy-title">发布时间:</span>2020-04-04, 23:14:51</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-27, 19:18:37</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/04/php/" title="php代码审计">https://silver2835.github.io/2020/04/04/php/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

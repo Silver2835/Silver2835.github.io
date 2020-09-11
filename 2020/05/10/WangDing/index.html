@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GWCTFwp | Zk&#39;s blog</title>
-  <meta name="keywords" content=" wp , web ">
-  <meta name="description" content="GWCTFwp | Zk&#39;s blog">
+  <title>WangDing | Zk&#39;s blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="WangDing | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Clion live template 动态模板教程背景从vs2019+Resharper转到CLion，刚开始确实不太适应，其中一个问题就是，我敲个if，switch之类的只有关键字出现，后来查了一下，这个是动态模板，然后发现，clion默认的模板只有三个。。。后面两个还是我暂时用不到的（我太菜了），所以我实际用的只有一个for循环模板，相比于之前几乎啥都有模板，这能不习惯吗。。。Google了">
 <meta name="keywords" content="Clion">
@@ -389,33 +389,19 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-GWCTFwp" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-WangDing" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">GWCTFwp</h1>
+        <h1 class="article-title">WangDing</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            
-                <a href="javascript:" data-rel="题解">题解</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color3">wp</a>
-            
-            <a href="javascript:" class="color4">web</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-28 17:32:09'>2020-02-26 22:35</time>
+        创建时间:<time class="date" title='更新时间: 2020-05-10 19:33:44'>2020-05-10 13:13</time>
         
     </div>
     <div class="article-meta">
@@ -437,7 +423,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#广外CTF-writeup"><span class="toc-text">广外CTF writeup</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枯燥的抽奖"><span class="toc-text">枯燥的抽奖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-text"></span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网鼎杯"><span class="toc-text">网鼎杯</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#签到"><span class="toc-text">签到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#签到-1"><span class="toc-text">签到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pwn1"><span class="toc-text">pwn1</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -453,21 +439,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="广外CTF-writeup"><a href="#广外CTF-writeup" class="headerlink" title="广外CTF writeup"></a>广外CTF writeup</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>算是除了新生赛之外真正打的第一场比赛吧，依然记得那天早上早早去到实验室等Apeng大佬开门，然后和几个同学在实验室坐了差不多一天，最后的战绩就是。。。解出了两道题。。。<br>比赛结束之后去到了<a href="https://buuoj.cn/" target="_blank" rel="noopener">BUUCTF</a>把剩下的题目（看着writeup）写出来，然后再写自己的wp（好像没什么不对。。。）</p>
-<h2 id="枯燥的抽奖"><a href="#枯燥的抽奖" class="headerlink" title="枯燥的抽奖"></a>枯燥的抽奖</h2><p>这题当时就做出来了的（Google出来的）。。。</p>
-<p><img src="/2020/02/26/GWCTFwp/20200226224433.png" alt="打开网址之后的界面"></p>
-<p>题目是给出前十位让你给出完整的总共20位数字。</p>
-<p>打开源代码之后发现了check.php</p>
-<p><img src="/2020/02/26/GWCTFwp/20200226225046.png" alt></p>
-<p>然后打开check.php,发现了源码：<br><img src="/2020/02/26/GWCTFwp/20200226225204.png" alt></p>
-<p>Google一下会发现是伪随机数</p>
-<p>用脚本把前十位数字的位置跑出来：<br><img src="https://img-blog.csdnimg.cn/20191130112854887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<p>那个奇怪的echo是为了方便待会儿跑php_mt_seed<br>就是位置出现两次并且紧跟一个零以及总字符串的长度<br>（第一次做的时候直接复制粘贴压根儿没发现这一点。。。）</p>
-<p>然后再把跑出来的那一串位置放到php_mt_seed中跑：<br><img src="https://img-blog.csdnimg.cn/20191130110450812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>记得小茗大佬问我为什么要放到虚拟机里面跑。。。当时真不知道，别人的博客是在Lunix里跑的那我只能打开VMWare了呗。。。<br>然后现在再看发现这玩意儿是tar.gz,当时的我在windows下压根儿就打不开，而且现在用7z打开了之后也不知道为啥make不成功。。。反正就是跑不起来。。。。。<br><img src="/2020/02/26/GWCTFwp/20200226230336.png" alt></p>
-<p>总之就是把种子跑出来，然后在把全部20位跑出来：<img src="https://img-blog.csdnimg.cn/20191130110508611.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<p>（第一次做的时候的图了。。。）</p>
-<p>然后得到flag：<img src="https://img-blog.csdnimg.cn/2019113012073414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<h2 id><a href="#" class="headerlink" title></a></h2>
+        <h1 id="网鼎杯"><a href="#网鼎杯" class="headerlink" title="网鼎杯"></a>网鼎杯</h1><h2 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h2><p>答对15道题之后输入token，按F12，在控制台中找到flag</p>
+<img src="/2020/05/10/WangDing/image-20200510172243484.png" alt="image-20200510172243484" style="zoom:67%;">
+
+<p><img src="/2020/05/10/WangDing/image-20200510172309573.png" alt="image-20200510172309573"></p>
+<p>flag{a072cb2e1a02320e0d9e75e83296976b}</p>
+<h2 id="签到-1"><a href="#签到-1" class="headerlink" title="签到"></a>签到</h2><p>答对15道题之后输入token，按F12，在控制台中找到flag</p>
+<p>flag{a072cb2e1a02320e0d9e75e83296976b}</p>
+<h2 id="pwn1"><a href="#pwn1" class="headerlink" title="pwn1"></a>pwn1</h2>
       
        
     </div>
@@ -476,12 +455,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>GWCTFwp</p>
+    <p><span class="copy-title">文章标题:</span>WangDing</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Kyle">Kyle</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-02-26, 22:35:23</p>
-    <p><span class="copy-title">最后更新:</span>2020-02-28, 17:32:09</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/26/GWCTFwp/" title="GWCTFwp">https://silver2835.github.io/2020/02/26/GWCTFwp/</a>
+    <p><span class="copy-title">发布时间:</span>2020-05-10, 13:13:08</p>
+    <p><span class="copy-title">最后更新:</span>2020-05-10, 19:33:44</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/05/10/WangDing/" title="WangDing">https://silver2835.github.io/2020/05/10/WangDing/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

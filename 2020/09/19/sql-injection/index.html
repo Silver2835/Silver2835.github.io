@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Aurora新生赛wp | Zk&#39;s blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Aurora新生赛wp | Zk&#39;s blog">
+  <title>sql injection | Zk&#39;s blog</title>
+  <meta name="keywords" content=" web ">
+  <meta name="description" content="sql injection | Zk&#39;s blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="SQL injection核心代码SELECT * FROM users WHERE id= 类型整数型SELECT * FROM users WHERE id= 1 字符型SELECT * FROM users WHERE id=&amp;#39;1&amp;#39; 步骤 输入1、1&amp;#39; 判断是整数型注入还是字符型注入，若输入1&amp;#39;后报错：">
 <meta name="keywords" content="web">
@@ -394,19 +394,31 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Aurora新生赛wp" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-sql-injection" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Aurora新生赛wp</h1>
+        <h1 class="article-title">sql injection</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="web">web</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">web</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-01-21 11:07:13'>2019-11-02 10:01</time>
+        创建时间:<time class="date" title='更新时间: 2020-09-19 15:22:53'>2020-09-19 15:18</time>
         
     </div>
     <div class="article-meta">
@@ -428,7 +440,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MISC"><span class="toc-text">MISC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#san-check"><span class="toc-text">san check</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim2048"><span class="toc-text">vim2048</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wlan"><span class="toc-text">wlan</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fuck-dawu"><span class="toc-text">fuck_dawu</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web"><span class="toc-text">Web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP-is-very-good"><span class="toc-text">PHP is very good</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#check-in"><span class="toc-text">check in</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Welcome-to-Aurora"><span class="toc-text">Welcome to Aurora</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ez-LFI"><span class="toc-text">ez LFI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssti"><span class="toc-text">ssti</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP-Revenger"><span class="toc-text">PHP Revenger</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Crypto"><span class="toc-text">Crypto</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RE"><span class="toc-text">RE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#re-signup"><span class="toc-text">re_signup</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL-injection"><span class="toc-text">SQL injection</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#核心代码"><span class="toc-text">核心代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型"><span class="toc-text">类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整数型"><span class="toc-text">整数型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符型"><span class="toc-text">字符型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-text">步骤</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -444,30 +456,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><h2 id="san-check"><a href="#san-check" class="headerlink" title="san check"></a>san check</h2><p>签到题。。。<br><img src="https://img-blog.csdnimg.cn/20191102132139898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>用手速拿到了一血hh</p>
-<h2 id="vim2048"><a href="#vim2048" class="headerlink" title="vim2048"></a>vim2048</h2><p><img src="https://img-blog.csdnimg.cn/20191102133203542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="打游戏ing。。。"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191102134349230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="每次玩2048就这种时候最爽"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191102140320580.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="emmmm。。。。"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191102151413498.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="开始绝望。。。"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191102205915149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>答应我,别问我玩了多少次可以吗</p>
-<h2 id="wlan"><a href="#wlan" class="headerlink" title="wlan"></a>wlan</h2><p>这题真的学到了<br>头一次知道了cap<br>然后下载了wireshark<br>然后google流量分析进行学习<br>刚开始在<img src="https://img-blog.csdnimg.cn/20191104123704653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>php?后面的那串数字上面纠结了好久。。。总觉得很奇怪。。。<br>想了很久纯数字应该是什么密码<br>然后继续往下翻,看到了login的数据,就觉得应该就在里面了<br>然后翻开找到password就OK了<br><img src="https://img-blog.csdnimg.cn/20191104123433864.png" alt></p>
-<h2 id="fuck-dawu"><a href="#fuck-dawu" class="headerlink" title="fuck_dawu"></a>fuck_dawu</h2><p>还Google了一下dawu是什么。。。然后。。。woc原来是大物。。。。<br>然后解压之后又去Google dsd文件 等等?dsd不是个音乐文件吗???<br>“软件怎么都调不出正常的结果”难不成这个是仪器上面的专用软件???</p>
-<p><img src="https://img-blog.csdnimg.cn/20191104125533910.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="???你们认真的吗"><br>还没学过大物的我表示很懵逼</p>
-<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="PHP-is-very-good"><a href="#PHP-is-very-good" class="headerlink" title="PHP is very good"></a>PHP is very good</h2><p>这道题卡了我好久<br>google了好久,php进行的隐写应该是lsb<br>可是能进行lsb的只有png或者bmp<br>可是给的图是张jpg啊。。。。这该怎么办<br>等等“ flag is in this page”<br>为什么我看成了“this picture”<br>我太难了。。。<br><img src="https://img-blog.csdnimg.cn/20191103000037390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>为什么10分的题目这么难啊。。<br>对不起,其实我没学会<br>只是我Google能力比较强<br>我Google了一下,应该是改编自bytectf2019都boring code<br>但是我看不懂wp。。。<br>只能依葫芦画瓢。。<br><img src="https://img-blog.csdnimg.cn/20191103163412440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<h2 id="check-in"><a href="#check-in" class="headerlink" title="check in"></a>check in</h2><p>F12<br><img src="https://img-blog.csdnimg.cn/20191102232725426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>然后看到等号,base64解码<br>完成</p>
-<h2 id="Welcome-to-Aurora"><a href="#Welcome-to-Aurora" class="headerlink" title="Welcome to Aurora"></a>Welcome to Aurora</h2><p>刚开始还蛮懵逼的,因为参考的是hackergame2018的那个黑曜石浏览器,但是把源代码看了好多好多遍,还是找不到指定的ua。。。<br>甚至把那道题目的ua里面的heicore换成了Aurora。。。当然还是不行<br>然后一气之下直接改成了Aurora。。。结果。。。就进去了<br><img src="https://img-blog.csdnimg.cn/20191102230415836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>然后我又开始纠结这个成员怎么判定。。。<br>然后抓包:<br><img src="https://img-blog.csdnimg.cn/20191102230712973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>发现了这个<br>然后改过来就行了<br><img src="https://img-blog.csdnimg.cn/20191102230759365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<h2 id="ez-LFI"><a href="#ez-LFI" class="headerlink" title="ez LFI"></a>ez LFI</h2><p>google一下lfi:Local File Include<br><img src="https://img-blog.csdnimg.cn/20191102224300517.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="只找到了github"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191102224448584.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="在地址栏输入"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191102223821159.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="然后解码"></p>
-<h2 id="ssti"><a href="#ssti" class="headerlink" title="ssti"></a>ssti</h2><p>google一下<br>然后。。<br><img src="https://img-blog.csdnimg.cn/20191102231427462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>。。。emmm大佬你就是在这借鉴的吧。。。页面都是一样的。。。</p>
-<p>然后昵称那里输入<code>{{ config.items() }}</code><br><img src="https://img-blog.csdnimg.cn/20191102231707637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<p>找到flag,看到等号,base64解码,得到flag</p>
-<h2 id="PHP-Revenger"><a href="#PHP-Revenger" class="headerlink" title="PHP Revenger"></a>PHP Revenger</h2><p>仔细看了一下和第一道题的区别,发现被ban的函数是一样的啊,为什么就bye~了呢。。。<br><img src="https://img-blog.csdnimg.cn/20191103165845851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt="多了个“/”?"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191103171216139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>看了一下和原题的区别,发现出题人更狠,ban掉了好多原本题目中没ban掉的函数,而且这些就是wp里面用到的<br>那么问题又来了。。。我第一题是怎么做出来的。。。理论上应该被ban了啊</p>
-<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><p>##littleRSA<br><img src="https://img-blog.csdnimg.cn/20191103085724679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>刚开始拿到这个python文件的时候觉得那个flag是个密文,需要解密<br>然后Google了一会儿,想着填进去试试?。。。结果就对了。。</p>
-<p>##fullRSA</p>
-<h1 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h1><h2 id="re-signup"><a href="#re-signup" class="headerlink" title="re_signup"></a>re_signup</h2><p><img src="https://img-blog.csdnimg.cn/20191104231811949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt></p>
-<p><img src="https://img-blog.csdnimg.cn/20191104231858476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbHZlcjI4MzU=,size_16,color_FFFFFF,t_70" alt><br>刚开始还以为是栅栏密码。。。<br>结果。。。。。<br>。。。不说了。。确实有点烦。。。</p>
+        <h1 id="SQL-injection"><a href="#SQL-injection" class="headerlink" title="SQL injection"></a>SQL injection</h1><h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><p><code>SELECT * FROM users WHERE id=</code></p>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="整数型"><a href="#整数型" class="headerlink" title="整数型"></a>整数型</h3><p><code>SELECT * FROM users WHERE id= 1</code></p>
+<h3 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h3><p><code>SELECT * FROM users WHERE id=&#39;1&#39;</code></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li>输入<code>1</code>、<code>1&#39;</code> 判断是整数型注入还是字符型注入，若输入<code>1&#39;</code>后报错：</li>
+</ol>
 
       
        
@@ -477,12 +471,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Aurora新生赛wp</p>
+    <p><span class="copy-title">文章标题:</span>sql injection</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Kyle">Kyle</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-02, 10:01:57</p>
-    <p><span class="copy-title">最后更新:</span>2020-01-21, 11:07:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/02/Aurora%E6%96%B0%E7%94%9F%E8%B5%9Bwp/" title="Aurora新生赛wp">https://silver2835.github.io/2019/11/02/Aurora%E6%96%B0%E7%94%9F%E8%B5%9Bwp/</a>
+    <p><span class="copy-title">发布时间:</span>2020-09-19, 15:18:05</p>
+    <p><span class="copy-title">最后更新:</span>2020-09-19, 15:22:53</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/09/19/sql-injection/" title="sql injection">https://silver2835.github.io/2020/09/19/sql-injection/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
